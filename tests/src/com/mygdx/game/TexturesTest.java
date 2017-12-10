@@ -16,18 +16,14 @@
 
 package com.mygdx.game;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
-import static org.mockito.Mockito.mock;
-
-import com.badlogic.gdx.graphics.GL20;
 import com.mygdx.game.assets.Textures;
 import com.mygdx.game.util.GdxTestRunner;
+import com.mygdx.game.util.MockGameFactory;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import com.badlogic.gdx.Gdx;
+import static org.junit.Assert.assertNotNull;
 
 @RunWith(GdxTestRunner.class)
 public class TexturesTest {
@@ -36,8 +32,7 @@ public class TexturesTest {
 
 	@Before
 	public void init() {
-		Gdx.gl = mock(GL20.class);
-		textures = new Textures();
+		textures = new MockGameFactory().newTextures();
 		textures.load();
 		textures.finishLoading();
 	}
