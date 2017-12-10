@@ -55,7 +55,6 @@ project(":core") {
     dependencies {
         compile "com.badlogicgames.gdx:gdx:$gdxVersion"
         compile "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
-        compile group: 'com.google.inject', name: 'guice', version: '4.1.0'
     }
 }
 
