@@ -32,7 +32,7 @@ public class TexturesTest {
 
 	@Before
 	public void init() {
-		textures = new MockGameEngine().newTextures();
+		textures = new MockGameEngine().getTextures();
 		textures.load();
 		textures.finishLoading();
 	}

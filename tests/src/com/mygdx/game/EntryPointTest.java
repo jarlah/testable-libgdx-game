@@ -7,19 +7,19 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(GdxTestRunner.class)
-public class GameTest {
+public class EntryPointTest {
 
-    private Game game;
+    private EntryPoint entryPoint;
 
     @Before
     public void init() {
-        this.game = new Game(new MockGameEngine());
+        this.entryPoint = new EntryPoint(new MockGameEngine());
     }
 
     @Test
     public void test() {
-        game.create();
-        game.render();
-        game.dispose();
+        entryPoint.create();
+        entryPoint.render();
+        entryPoint.dispose();
     }
 }
