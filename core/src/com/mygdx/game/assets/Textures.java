@@ -5,7 +5,11 @@ import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.Texture;
 
 public class Textures {
-    private AssetManager manager = new AssetManager();
+    private final AssetManager manager;
+
+    public Textures(AssetManager assetManager) {
+        this.manager = assetManager;
+    }
 
     public static final AssetDescriptor<Texture> someTexture =
             new AssetDescriptor<Texture>("images/badlogic.jpg", Texture.class);

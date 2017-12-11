@@ -1,6 +1,7 @@
 package com.mygdx.game;
 
 import com.badlogic.gdx.Game;
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.mygdx.game.assets.Textures;
 import com.mygdx.game.engine.Engine;
@@ -23,7 +24,7 @@ public class EntryPointTest {
         final Engine fakeEngine = mock(Engine.class);
         final SpriteBatch fakeBatch = mock(SpriteBatch.class);
         when(fakeEngine.getBatch()).thenReturn(fakeBatch);
-        final Textures textures = new Textures();
+        final Textures textures = new Textures(mock(AssetManager.class));
         when(fakeEngine.getTextures()).thenReturn(textures);
         when(fakeEngine.withGame(any(Game.class))).thenReturn(fakeEngine);
         this.entryPoint = new EntryPoint(fakeEngine);
