@@ -18,7 +18,6 @@ package com.mygdx.game;
 
 import com.mygdx.game.assets.Textures;
 import com.mygdx.game.util.GdxTestRunner;
-import com.mygdx.game.util.MockGameEngine;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -32,7 +31,7 @@ public class TexturesTest {
 
 	@Before
 	public void init() {
-		textures = new MockGameEngine().getTextures();
+		textures = new Textures();
 		textures.load();
 		textures.finishLoading();
 	}
